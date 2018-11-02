@@ -21,6 +21,8 @@ policyAmount:0
 @ViewChild('f')form:any;
 indexPos:number;
 toggleForm: boolean = false;
+page:any;
+
 constructor(private insuranceService:InsuranceAPIService) {
 this.insuranceService.findAllPolicies().subscribe(data => this.policyListAll = data);
 }
