@@ -9,3 +9,6 @@
 
 <input type="submit" value="Signin" class="btn btn-info" [disabled]="loginForm.invalid">
 </form>
+<div class="row">
+<span class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}</span>
+</div>

@@ -6,7 +6,7 @@ describe('InsuranceAPIService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: InsuranceAPIService = TestBed.get(InsuranceAPIService);
+    const service:   InsuranceAPIService = TestBed.get(InsuranceAPIService);
     expect(service).toBeTruthy();
   });
 });

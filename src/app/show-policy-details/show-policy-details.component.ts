@@ -1,26 +1,26 @@
-import {Component, OnInit, ViewChild }from '@angular/core';
-import {InsuranceAPIService }from '../insurance-api.service';
-import {PolicyDetails }from '../content/policy-details';
+import {Component, OnInit, ViewChild } from '@angular/core';
+import {InsuranceAPIService } from '../insurance-api.service';
+import {PolicyDetails } from '../content/policy-details';
 
 @Component( {
-selector:'app-show-policy-details',
-templateUrl:'./show-policy-details.component.html',
+selector: 'app-show-policy-details',
+templateUrl: './show-policy-details.component.html',
 styleUrls:['./show-policy-details.component.css']
 })
 export class ShowPolicyDetailsComponent implements OnInit {
 
 policyListAll:PolicyDetails[] = [];
-searchName:string = '';
-buttonText:string = "Add";
+searchName: string = '';
+buttonText: string = "Add";
 policyData:PolicyDetails =  {
 id:0,
-policyHolderName:'',
-maturityDate:new Date(), 
+policyHolderName: '',
+maturityDate:new Date(),
 policyAmount:0
   }
 @ViewChild('f')form:any;
 indexPos:number;
-toggleForm:boolean = false;
+toggleForm: boolean = false;
 constructor(private insuranceService:InsuranceAPIService) {
 this.insuranceService.findAllPolicies().subscribe(data => this.policyListAll = data);
 }

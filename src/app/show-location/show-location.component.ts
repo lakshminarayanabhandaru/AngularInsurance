@@ -14,7 +14,7 @@ export class ShowLocationComponent implements OnInit {
   ngOnInit() {
   }
 
-  capture(val:string){
+  capture(val: string){
     console.log(val);
     this.selectedLocation.next(val);
   }

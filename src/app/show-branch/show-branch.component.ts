@@ -7,7 +7,7 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 })
 export class ShowBranchComponent implements OnInit {
 
-  @Input() cityName:string;
+  @Input() cityName: string;
   @Output() branches:EventEmitter<string[]> = new EventEmitter<string[]>();
   constructor() { 
     console.log("Constructor "+this.cityName);

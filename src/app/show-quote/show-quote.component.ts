@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowQuoteComponent implements OnInit {
 
-  isDisabled :boolean = true;
+  isDisabled : boolean = true;
   age : number = 18;
   suggestedPolicy: string;
   constructor() { }

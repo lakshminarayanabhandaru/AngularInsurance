@@ -1,6 +1,6 @@
 export interface PageLink {
-    linkText:string;
-    linkStyle:string;
-    linkRef?:string;
+    linkText: string;
+    linkStyle: string;
+    linkRef?: string;
 
 }

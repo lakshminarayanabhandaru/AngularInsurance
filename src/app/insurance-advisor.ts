@@ -1,5 +1,5 @@
 export interface InsuranceAdvisor {
-    id:number;
-    name:string;
-    mobileNumber:number;
+    id:  number;
+    name:   string;
+    mobileNumber:  number;
 }

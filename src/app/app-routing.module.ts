@@ -7,21 +7,23 @@ import { ShowAdvisorsComponent } from './show-advisors/show-advisors.component';
 import { ShowQuoteComponent } from './show-quote/show-quote.component';
 import { SearchBranchComponent } from './search-branch/search-branch.component';
 import { LogoutComponent } from './logout/logout.component';
+import { UniversalGuard } from './universal.guard';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
+  {path: 'login/:msg', component: LoginComponent},
   {path: 'products', component: ContentComponent},
-  {path: 'history', component: ShowPolicyDetailsComponent},
+  {path: 'history', component: ShowPolicyDetailsComponent, canActivate: [UniversalGuard]},
   {path: 'advisors', component: ShowAdvisorsComponent},
   {path: 'quote', component: ShowQuoteComponent},
   {path: 'branches', component: SearchBranchComponent},
-  {path: 'logout', component: LogoutComponent},
+  {path: 'logout', component: LogoutComponent, canDeactivate:[UniversalGuard]},
   {path: '**', redirectTo: 'login'}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {enableTracing: true})],
+  imports: [RouterModule.forRoot(routes, {enableTracing: false})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

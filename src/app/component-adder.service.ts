@@ -2,20 +2,20 @@ import { RouterModule } from '@angular/router';
 import { Injectable, ComponentFactoryResolver, ViewContainerRef } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn:   'root'
 })
 export class ComponentAdderService {
 
-  viewRef: ViewContainerRef;
-  constructor(private resolver:ComponentFactoryResolver) { }
+  viewRef:   ViewContainerRef;
+  constructor(private resolver:  ComponentFactoryResolver) { }
 
   // where to add
-  setViewRef(viewRef){
+  setViewRef(viewRef) {
     this.viewRef = viewRef;
   }
 
   // what to add
-  addComponent(compToAdd:any): any {
+  addComponent(compToAdd:  any):   any {
     // create and register factory in resolver for entry components
     const factory = this.resolver.resolveComponentFactory(compToAdd);
     // Access the viewref's injector to inject the component
@@ -26,7 +26,7 @@ export class ComponentAdderService {
     return componentRef;
   }
 
-  remove(){
+  remove() {
     this.viewRef.remove();
   }
 

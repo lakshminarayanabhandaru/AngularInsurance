@@ -12,12 +12,12 @@ export class TestimonyComponent implements OnInit{
   ngOnInit() {
   }
 
-  getRetailCustomerFeedback():string{
+  getRetailCustomerFeedback(): string{
 
     return "Claims processing is prompt and recieved payment within days!"
   }
 
-  getCorpCustomerFeedback():string{
+  getCorpCustomerFeedback(): string{
     return "Door step service by the advisors is very much appriciated!"
   }
 

@@ -1,14 +1,14 @@
 import { Directive, ElementRef, Renderer2, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[appHighlight]'
+  selector:   '[appHighlight]'
 })
 export class HighlightDirective {
 
-  constructor(private el: ElementRef,private renderer: Renderer2) { }
+  constructor(private el:   ElementRef,private renderer:   Renderer2) { }
 
   @HostListener('mouseover')
-  over(){
+  over() {
     console.log('over called');
     this.renderer.addClass(this.el.nativeElement,'rotate');
     this.renderer.setStyle(this.el.nativeElement,'font-size','1.4em');
@@ -16,7 +16,7 @@ export class HighlightDirective {
   }
 
   @HostListener('mouseout')
-  out(){
+  out() {
     console.log('out called');
     this.renderer.removeClass(this.el.nativeElement,'rotate');
     this.renderer.removeStyle(this.el.nativeElement,'font-size');

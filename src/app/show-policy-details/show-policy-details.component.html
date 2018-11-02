@@ -36,10 +36,10 @@
           [ngClass]="{'fa':true,'fa-arrow-down':toggleForm,'fa-arrow-up':!toggleForm}"></button></td>
     </tr>
     <tbody>
-      <tr *ngFor="let policy of policyListAll | customFilter:'policyHolderName':searchName | paginate:{itemsPerPage:2,currentPage:page}">
+      <tr *ngFor="let policy of policyListAll | customFilter: 'policyHolderName':searchName | paginate:{itemsPerPage:2,currentPage:page}">
         <td>{{policy.policyHolderName | uppercase}}</td>
-        <td>{{policy.policyAmount | currency:'INR':'symbol'}}</td>
-        <td>{{policy.maturityDate | date:'medium'}}</td>
+        <td>{{policy.policyAmount | currency: 'INR': 'symbol'}}</td>
+        <td>{{policy.maturityDate | date: 'medium'}}</td>
         <td><i class="fa fa-2x fa-edit" (click)="update(policy)"></i></td>
         <td><i class="fa fa-2x fa-remove" (click)="remove(policy)"></i></td>
       </tr>

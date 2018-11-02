@@ -1,11 +1,11 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'customFilter'
+  name:   'customFilter'
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(collection: any[], field: string, value: string): any[] {
+  transform(collection:   any[], field:   string, value:   string):   any[] {
     if (!collection) {
       return [];
     }

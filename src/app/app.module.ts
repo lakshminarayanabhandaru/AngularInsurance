@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule, HttpClient } from "@angular/common/http";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { NgxPaginationModule } from "ngx-pagination";
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,7 +24,7 @@ import { FilterPipe } from './filter.pipe';
 import { ShowPolicyDetailsComponent } from './show-policy-details/show-policy-details.component';
 
 @NgModule({
-  declarations: [
+  declarations:   [
     AppComponent,
     HeaderComponent,
     FooterComponent,
@@ -43,7 +43,7 @@ import { ShowPolicyDetailsComponent } from './show-policy-details/show-policy-de
     FilterPipe,
     ShowPolicyDetailsComponent
   ],
-  imports: [
+  imports:   [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -51,8 +51,8 @@ import { ShowPolicyDetailsComponent } from './show-policy-details/show-policy-de
     ReactiveFormsModule,
     NgxPaginationModule
   ],
-  providers: [HttpClient],
-  bootstrap: [AppComponent],
-  entryComponents:[ShowLocationComponent]
+  providers:   [HttpClient],
+  bootstrap:   [AppComponent],
+  entryComponents:   [ShowLocationComponent]
 })
 export class AppModule { }
