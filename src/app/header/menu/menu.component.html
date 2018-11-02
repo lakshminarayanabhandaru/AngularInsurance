@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand-md">
  <ul class="navbar-nav">
    <li *ngFor="let item of linksFromParent">
-     <a [href]="item.linkRef" [class]=item.linkStyle>{{item.linkText}}</a>
+     <a [routerLink]="[item.linkRef]" [class]=item.linkStyle>{{item.linkText}}</a>
    </li>
-   <li *ngIf="showLogin"><a href='' appHighlight>Login</a></li>
-   <li *ngIf="showLogout"><a href='' appHighlight>Logout</a></li>
+   <li *ngIf="showLogin"><a [routerLink]="['login']" routerLinkActive="router-link-active" appHighlight>Login</a></li>
+   <li *ngIf="showLogout"><a [routerLink]="['logout']" appHighlight>Logout</a></li>
  </ul>
 </nav>

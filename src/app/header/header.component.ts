@@ -10,14 +10,18 @@ export class HeaderComponent implements OnInit {
 
   majHeader: string;
   logo: string;
-  linkText: string = "Login";
+  linkText: string = 'Login';
   links: PageLink[];
   constructor() {
-    this.majHeader = "Insurance Company";
-    this.logo = "assets/images/logo.JPG";
-    this.links = [{ linkText: "Home", linkStyle: "nav-link", linkRef: "home" },
-    { linkText: "Products", linkStyle: "nav-link", linkRef: "products" },
-    { linkText: "History", linkStyle: "nav-link", linkRef: "history" }]
+    this.majHeader = 'Insurance Company';
+    this.logo = 'assets/images/logo.JPG';
+    this.links = [
+    { linkText: 'Products', linkStyle: 'nav-link', linkRef: 'products' },
+    { linkText: 'History', linkStyle: 'nav-link', linkRef: 'history' },
+    { linkText: 'Advisors', linkStyle: 'nav-link', linkRef: 'advisors' },
+    { linkText: 'Get Quote', linkStyle: 'nav-link', linkRef: 'quote' },
+    { linkText: 'Branches', linkStyle: 'nav-link', linkRef: 'branches' }
+  ];
   }
 
   ngOnInit() {

@@ -3,28 +3,9 @@
     <app-header></app-header>
   </div>
   <div class="col-md-12 top-buffer">
-    <app-content></app-content>
+    <router-outlet></router-outlet>
   </div>
-  <div class="col-md-12 top-buffer">
-      <app-show-policy-details></app-show-policy-details>
-    </div>
-  <div class="col-md-12 top-buffer">
-    <app-show-advisors></app-show-advisors>
-  </div>
-  <div class="col-md-12 top-buffer">
-    <app-show-quote></app-show-quote>
-  </div>
-  <div class="col-md-12 top-buffer">
-      <app-search-branch></app-search-branch>
-  </div>
-  <div class="col-md-12 top-buffer">
-    <app-login></app-login>
-    <app-logout></app-logout>
-</div>
   <div class="col-md-12 top-buffer">
     <app-footer></app-footer>
   </div>
 </div>
-<article></article>
-<button appAddElement [elementToAdd]="'h1'" [elementText]="'Added by directive'">Add Directive</button>
-<router-outlet></router-outlet>
