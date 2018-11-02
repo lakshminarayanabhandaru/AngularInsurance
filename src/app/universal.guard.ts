@@ -21,7 +21,7 @@ export class UniversalGuard implements CanActivate, CanDeactivate<LogoutComponen
     const url = currentState.url;
     console.log(currentState);
     if (confirm) {
-      this.route.navigate(['login']);
+      //this.route.navigate(['login']);
     }
     return confirm;
   }

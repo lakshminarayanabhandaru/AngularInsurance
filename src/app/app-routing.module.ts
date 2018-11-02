@@ -8,13 +8,18 @@ import { ShowQuoteComponent } from './show-quote/show-quote.component';
 import { SearchBranchComponent } from './search-branch/search-branch.component';
 import { LogoutComponent } from './logout/logout.component';
 import { UniversalGuard } from './universal.guard';
+import { ShowHealthPolicyComponent } from './show-health-policy/show-health-policy.component';
+import { DetailsComponent } from './details/details.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
   {path: 'login/:msg', component: LoginComponent},
   {path: 'products', component: ContentComponent},
-  {path: 'history', component: ShowPolicyDetailsComponent, canActivate: [UniversalGuard]},
+  {path: 'history', component: DetailsComponent, children: [
+    {path: 'health', component: ShowHealthPolicyComponent, outlet: 'health'},
+    {path: 'life', component: ShowPolicyDetailsComponent, outlet: 'life', canActivate: [UniversalGuard]}
+  ]},
   {path: 'advisors', component: ShowAdvisorsComponent},
   {path: 'quote', component: ShowQuoteComponent},
   {path: 'branches', component: SearchBranchComponent},

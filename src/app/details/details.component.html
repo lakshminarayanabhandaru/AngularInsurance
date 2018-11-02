@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-md-3">
+    <ul>
+      <li><a [routerLink]="['/history',{outlets:{'health':['health']}}]" routerLinkActive="router-link-active">Auxillary Test</a></li>
+      <li><a [routerLink]="['/history',{outlets:{'life':['life']}}]" routerLinkActive="router-link-active">Auxillary Test</a></li>
+      <li><a [routerLink]="['health']"  class="link">Health Insurance</a></li>
+      <li><a [routerLink]="['life']" class="link">Life Insurance</a></li>
+    </ul>
+  </div>
+  <div class="col-md-9">
+    <router-outlet name="health"></router-outlet>
+    <router-outlet name="life"></router-outlet>
+  </div>
+</div>
